@@ -1,0 +1,25 @@
+let myArray = [10, 20, 30, 40, 50];
+
+// 1. Remove a specific element from the array
+function removeElement(array, element) {
+  const index = array.indexOf(element);
+  if (index !== -1) {
+    array.splice(index, 1); // Removes the element at the specified index
+  }
+  return array;
+}
+
+// 2. Check if an array contains a specified value
+function containsElement(array, element) {
+  return array.includes(element);
+}
+
+// 3. Empty the array
+function emptyArray(array) {
+  array.length = 0;
+  return array;
+}
+console.log("Original array:", myArray);
+console.log("Array after removing 30:", removeElement(myArray, 30));
+console.log("Does the array contain 40?", containsElement(myArray, 40));
+console.log("Array after emptying:", emptyArray(myArray));
