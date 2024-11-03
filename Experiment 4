@@ -1,0 +1,17 @@
+// Method 1 : Using equality operator ==
+const string1 = 'linux';
+const string3 = 'LINUX';
+console.log(string1.toLowerCase() === string3.toLowerCase());
+
+// Method 2 : comparing string lengths
+const string1 ='linux';
+const string2 ='hint';
+console.log(string1.length>string2.length);
+
+//Method 3 : comparing using localeCompare() Method
+varstring1 ="car";
+varstring2 ="bus";
+varstring3 ="bus";
+console.log(string1.localeCompare(string2));
+
+//Output 1 means string1 is alphabetically greater than string2, otherwise if equal the output will be 0, make changes accordingly
