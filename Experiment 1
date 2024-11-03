@@ -1,0 +1,17 @@
+function areaOfTriangle(base, height) {
+    return 0.5 * base * height;
+}
+function areaOfRectangle(length, width) {
+    return length * width;
+}
+function areaOfCircle(radius) {
+    return Math.PI * radius * radius;
+}
+let base = 5;
+let height = 10;
+console.log("Area of Triangle: " + areaOfTriangle(base, height));
+let length = 8;
+let width = 6;
+console.log("Area of Rectangle: " + areaOfRectangle(length, width));
+let radius = 7;
+console.log("Area of Circle: " + areaOfCircle(radius));
