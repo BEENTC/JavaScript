@@ -1,0 +1,28 @@
+let inputString = prompt("Enter a string:");
+
+//Reverse string
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+//Replace characters in a string
+function replaceCharacters(str, oldChar, newChar) {
+    return str.split(oldChar).join(newChar);
+}
+
+//Check if the string is a palindrome
+function isPalindrome(str) {
+    let reversed = reverseString(str);
+    return str === reversed;
+}
+console.log("Original String: " + inputString);
+console.log("Reversed String: " + reverseString(inputString));
+
+let oldChar = prompt("Enter the character to replace:");
+let newChar = prompt("Enter the new character:");
+console.log("String after replacing characters: " + replaceCharacters(inputString, oldChar, newChar));
+if (isPalindrome(inputString)) {
+    console.log("The string is a palindrome.");
+} else {
+    console.log("The string is not a palindrome.");
+}
