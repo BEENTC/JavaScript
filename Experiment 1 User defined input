@@ -1,0 +1,24 @@
+function areaOfTriangle(base, height) {
+    return 0.5 * base * height;
+}
+function areaOfRectangle(length, width) {
+    return length * width;
+}
+function areaOfCircle(radius) {
+    return Math.PI * radius * radius;
+}
+let shape = prompt("Choose a shape to calculate area (triangle, rectangle, circle):").toLowerCase();
+if (shape === "triangle") {
+    let base = parseFloat(prompt("Enter the base of the triangle:"));
+    let height = parseFloat(prompt("Enter the height of the triangle:"));
+    console.log("Area of Triangle: " + areaOfTriangle(base, height));
+} else if (shape === "rectangle") {
+    let length = parseFloat(prompt("Enter the length of the rectangle:"));
+    let width = parseFloat(prompt("Enter the width of the rectangle:"));
+    console.log("Area of Rectangle: " + areaOfRectangle(length, width));
+} else if (shape === "circle") {
+    let radius = parseFloat(prompt("Enter the radius of the circle:"));
+    console.log("Area of Circle: " + areaOfCircle(radius));
+} else {
+    console.log("Invalid shape entered.");
+}
