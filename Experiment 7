@@ -7,52 +7,52 @@ unionSet.add(i);
 }
 return unionSet
 }
-const set A = new Set(['apple', 'mango', 'orange']);
-const set B = new Set(['grapes', 'apple', 'banana']);
-const result = union(set A, set B);
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['grapes', 'apple', 'banana']);
+const result = union(setA, setB);
 console.log(result);
 
 // Set Intersection Operation
 
 function intersection(setA, setB) {
 let intersectionSet = new Set();
-for (let i of set B) {
-if (set A.has(i)) {
+for (let i of setB) {
+if (setA.has(i)) {
 intersectionSet.add(i);
 }
 }
 return intersectionSet;
 }
-const set A = new Set(['apple', 'mango', 'orange']);
-const set B = new Set(['grapes', 'apple', 'banana']);
-const result = intersection(set A, set B);
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['grapes', 'apple', 'banana']);
+const result = intersection(setA, setB);
 console.log(result);
 
 // Set Difference Operation
 
 function difference(setA, setB) {
-let differenceSet = new Set(set A)
+let differenceSet = new Set(setA)
 for (let i of setB) {
 differenceSet.delete(i)
 }
 return differenceSet
 }
-const set A = new Set(['apple', 'mango', 'orange']);
-const set B = new Set(['grapes', 'apple', 'banana']);
-const result = difference(set A, set B);
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['grapes', 'apple', 'banana']);
+const result = difference(setA, setB);
 console.log(result);
 
 //Set Subset Operation
 
 function subset(setA, setB) {
 for (let i of setB) {
-if (!set A.has(i)) {
+if (!setA.has(i)) {
 return false
 }
 }
 return true
 }
-const set A = new Set(['apple', 'mango', 'orange']);
-const set B = new Set(['apple', 'orange']);
-const result = subset(set A, set B);
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['apple', 'orange']);
+const result = subset(setA, setB);
 console.log(result);
