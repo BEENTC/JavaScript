@@ -1,0 +1,58 @@
+// Set Union Operation
+
+function union(a, b) {
+    let unionSet = new Set(a);
+    for (let i of b) {
+        unionSet.add(i);
+    }
+    return unionSet;
+}
+const setA1 = new Set(['apple', 'mango', 'orange']); // Changed variable name to setA1 to avoid conflict
+const setB1 = new Set(['grapes', 'apple', 'banana']); // Changed variable name to setB1
+const unionResult = union(setA1, setB1); // Changed result variable to unionResult
+console.log("Union:", unionResult);
+
+// Set Intersection Operation
+
+function intersection(setA, setB) {
+    let intersectionSet = new Set();
+    for (let i of setB) {
+        if (setA.has(i)) {
+            intersectionSet.add(i);
+        }
+    }
+    return intersectionSet;
+}
+const setA2 = new Set(['apple', 'mango', 'orange']); // Changed variable name to setA2
+const setB2 = new Set(['grapes', 'apple', 'banana']); // Changed variable name to setB2
+const intersectionResult = intersection(setA2, setB2); // Changed result variable to intersectionResult
+console.log("Intersection:", intersectionResult);
+
+// Set Difference Operation
+
+function difference(setA, setB) {
+    let differenceSet = new Set(setA);
+    for (let i of setB) {
+        differenceSet.delete(i);
+    }
+    return differenceSet;
+}
+const setA3 = new Set(['apple', 'mango', 'orange']); // Changed variable name to setA3
+const setB3 = new Set(['grapes', 'apple', 'banana']); // Changed variable name to setB3
+const differenceResult = difference(setA3, setB3); // Changed result variable to differenceResult
+console.log("Difference:", differenceResult);
+
+// Set Subset Operation
+
+function subset(setA, setB) {
+    for (let i of setB) {
+        if (!setA.has(i)) {
+            return false;
+        }
+    }
+    return true;
+}
+const setA4 = new Set(['apple', 'mango', 'orange']); // Changed variable name to setA4
+const setB4 = new Set(['apple', 'orange']); // Changed variable name to setB4
+const subsetResult = subset(setA4, setB4); // Changed result variable to subsetResult
+console.log("Subset:", subsetResult);
